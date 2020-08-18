@@ -198,44 +198,19 @@ public class EarthquakeCityMap extends PApplet {
         }
 	}
 
-	private void sortAndPrint(int numToPrint){
-	       List<EarthquakeMarker> eq = new ArrayList <>();
+	private void sortAndPrint(int numToPrint) {
+	       List<EarthquakeMarker> eq = new ArrayList<>();
 	        for(Marker m: quakeMarkers){
 	            eq.add((EarthquakeMarker) m);
 	        }
-	     
 	        Collections.sort(eq);
 
-	        for(int i=0; i<numToPrint; i++){
-	            if(i==quakeMarkers.size()){
+	        for (int i = 0; i < numToPrint; i++) {
+	            if (i == quakeMarkers.size()) {
 	                break;
 	            }
 	            System.out.println(eq.get(i));
 	        }
-		// EarthquakeMarker[] quakeArr = new EarthquakeMarker[ quakeMarkers.size() ];
-			//quakeArr = quakeMarkers.toArray( quakeArr );
-			//Arrays.sort(quakeArr);
-
-			/*
-			 * following block to find greatest magnitude
-			 * occuring three or more times.
-			 */
-			/*for( int i=0; i<numToPrint; i++) {
-				if( quakeArr[i].getMagnitude() == quakeArr[i+1].getMagnitude()
-						&& quakeArr[i+1].getMagnitude() == quakeArr[i+2].getMagnitude() ) {
-					System.out.println("RRResult!!!!:= "+quakeArr[i].getMagnitude());
-					break;
-				}
-
-			}
-			/*
-			 * to print quakes in reverse order of magnitude
-			 */
-			
-			//for( int i=0; i<numToPrint && i<quakeArr.length; i++ ) {
-			//	System.out.println( quakeArr[i].getTitle() );
-			//}
-			
 	 } 
 	 /*
 	  * This method will create a new array from the list of earthquake markers (hint: there is

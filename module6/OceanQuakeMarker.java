@@ -33,7 +33,7 @@ public class OceanQuakeMarker extends EarthquakeMarker  {
 	@Override
 	public int compareTo(EarthquakeMarker o) {
 		// TODO Auto-generated method stub
-		return 0;
+		return super(o);
 	}
 	
 
